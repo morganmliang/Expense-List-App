@@ -1,8 +1,8 @@
-
-
-
-
-
+// High Order Component (HOC) - A component that renders another component
+// Reuse code
+//Render hihacking
+// Prop maipulation
+// Abstract state
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -52,6 +52,6 @@ const AdminInfo = withAdminWarning(Info);
 
 const AuthInfo = requireAuthentication(Info);
 
-//ReactDOM.render(<AdminInfo isAdmin={false} info="There are the details" />, document.getElementById('app'));
-ReactDOM.render(<AuthInfo isAuthenicated={false} info="There are the details" />, document.getElementById('app'));
+//ReactDOM.render(<AdminInfo isAdmin={true} info="There are the details" />, document.getElementById('app'));
+ReactDOM.render(<AuthInfo isAuthenicated={true} info="There are the details" />, document.getElementById('app'));
 

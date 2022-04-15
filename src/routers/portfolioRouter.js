@@ -1,34 +1,26 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
+import ExpenseDashboardPage from '../components/ExpenseDashboardPage';
+import AddExpensePage from '../components/AddExpensePage';
+import EditExpensePage from '../components/EditExpensePage';
+import HelpPage from '../components/HelpPage';
+import NotFoundPage from '../components/NotFoundPage';
 import Header from '../components/Header';
-import HomePage from '../components/HomePage';
-import Portfolio from "../components/Portfolio";
-import Contact from '../components/Contact';
-import ErrorPage from '../components/ErrorPage';
-import AllPortfolios from '../components/AllPortfolio';
-
 
 const PortfolioRouter = () => (
     <BrowserRouter>
         <div>
-            <Header></Header>
+            <Header />
             <Switch>
-                <Route path='/' component={HomePage} exact={true}/>
-                <Route path='/contact' component={Contact}/>
-                <Route path='/portfolio' component={AllPortfolios} exact={true}/>
-                <Route path='/portfolio/:id' component={Portfolio}/>
-                <Route component={ErrorPage}/>
-            
+                <Route path="/" component={ExpenseDashboardPage} exact={true}/>
+                <Route path="/create" component={AddExpensePage}/>
+                <Route path="/edit/:id" component={EditExpensePage}/>
+                <Route path="/help" component={HelpPage}/>
+                <Route component={NotFoundPage}/>
             </Switch>
-            
-        
-        
-        </div>
-    
+        </div> 
     </BrowserRouter>
 
-
 );
-
 
 export default PortfolioRouter;

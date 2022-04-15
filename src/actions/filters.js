@@ -7,7 +7,7 @@ export const setTextFilter = (text= '') => ({
 });
 
 export const sortByDate = () => ({
-    type: "SET_TEXT_FILTER",
+    type: "SORT_BY_AMOUNT",
 });
 
 export const sortByAmount = () => ({
